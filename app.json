@@ -1,0 +1,8 @@
+{
+  "name": "Huy's Profile",
+  "description": "This is profile of HuyNguyen",
+  "repository": "https://github.com/huynguyen22994/profile.git",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
