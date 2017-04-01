@@ -8,6 +8,8 @@ var md5 = require('blueimp-md5');
 var url = require('url');
 var jwt = require('jwt-simple');    
 
+app.set('port', (process.env.PORT || 5000));
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(session({
@@ -59,6 +61,6 @@ app.get('/logout', function (req, res) {
     res.redirect('/login');
 });
 
-server.listen(5000, function () {
-    console.log("server is listening with port 5000");
+server.listen(app.get('port'), function () {
+    console.log("server is listening with port ", app.get('port'));
 });
