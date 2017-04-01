@@ -33,14 +33,7 @@ var checkSession = function (req, res, next) {
 };
 
 app.get('/login', function (req, res) {
-    //var query = url.parse(req.url).query;
-    //console.log(query);
-    //res.end(md5(query));
-    var token = jwt.encode(user, secret);
-    var decode = jwt.decode(token, secret);
-    console.log(decode);
-    res.end(token);
-    //res.render('login');
+    res.render('login');
 });
 
 app.post('/login', function (req, res) {
